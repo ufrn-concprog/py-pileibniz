@@ -14,7 +14,7 @@ A **barrier** is a synchronization mechanism that causes multiple threads to wai
 
 ### Execution Workflow
 
-1. **Decomposition and thread spawning**: The user inputs the number of terms (`precision`) to calculate . An independent worker thread ([`CalcThread`](src/calc_thread.py)) is spawned for each term $i \in [0, \text{precision}-1]$.
+1. **Decomposition and thread spawning**: The user inputs the number of terms (`precision`) to calculate. An independent worker thread ([`CalcThread`](src/calc_thread.py)) is spawned for each term $i \in [0, \text{precision}-1]$.
 2. **Partial term calculation**: Each thread computes its $i$-th term:
 
    $$term_i = 4 \cdot \frac{(-1)^i}{2i + 1}$$
